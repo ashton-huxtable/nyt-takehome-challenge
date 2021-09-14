@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { fetchFeaturedArticles } from '../../Utilities/apiCalls';
+import { Articles } from '../Articles/Articles';
+
 
 const Home = () => {
 
@@ -16,7 +18,14 @@ const Home = () => {
   console.log(articles, 'articles')
 
   return(
-    <h1>Hello, world!</h1>
+    <main>
+      <h1>Hello, world!</h1>
+      <section className='articles'>
+        <Articles articles={articles}/>
+      </section>
+
+    </main>
+
   )
 }
 
