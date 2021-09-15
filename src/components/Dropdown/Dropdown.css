@@ -1,0 +1,9 @@
+.dropdown{
+  display: flex;
+  justify-content: center;
+}
+
+.topic-select{
+  width: 50vw;
+  height: 5vh;
+}
