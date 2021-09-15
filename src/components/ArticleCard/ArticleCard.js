@@ -5,7 +5,7 @@ import './ArticleCard.css'
 export const ArticleCard = ({multimedia, id, title, byline}) => {
 
   return (
-      <Link to={`/article/${title}}`} >
+      <Link to={`/article/${id}`} >
         <article className='article-card' id={id}>
           {/* <button>View Article</button> */}
             {/* <button className='more-info'>Details</button> */}

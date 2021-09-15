@@ -19,13 +19,17 @@ const cleanData = (data) => {
       published_date
     } = result
 
+    const split = uri.split('/')
+    const id = split[3]
+    console.log(id)
+
     return {
       'title': title,
       'abstract': abstract,
       'url': url,
       'byline': byline,
       'multimedia': multimedia,
-      'id': uri,
+      'id': id,
       'published': published_date
     }
   })
