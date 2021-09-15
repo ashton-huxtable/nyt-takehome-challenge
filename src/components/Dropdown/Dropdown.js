@@ -1,11 +1,15 @@
 import React from 'react'
 
 
-export const Dropdown = () => {
+export const Dropdown = ({category, setCategory}) => {
+
+  const handleTopicChange = (e) => {
+    setCategory(e.target.value)
+  }
   
   return (
    <div>
-     <select>
+     <select className='topic-select' name='category' value={category} onChange={handleTopicChange}>
        <option value='home'>Select Topic:</option>
        <option value='arts'>Arts</option>
        <option value='automobiles'>Automobiles</option>
@@ -33,6 +37,7 @@ export const Dropdown = () => {
        <option value='us'>United States</option>
        <option value='world'>World</option>
      </select>
+
    </div>
   )
 }
