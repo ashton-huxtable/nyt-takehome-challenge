@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArticleCard } from '../ArticleCard/ArticleCard';
+import '../ArticleCard/ArticleCard.css'
 
 export const Articles = ({articles}) => {
 
@@ -15,7 +16,7 @@ export const Articles = ({articles}) => {
     )
   })
   return (
-    <section>
+    <section className='main-articles'>
       {featuredArticles}
     </section>
   )

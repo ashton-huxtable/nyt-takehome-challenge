@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import { fetchFeaturedArticles } from '../../Utilities/apiCalls';
 import { Articles } from '../Articles/Articles';
 import { Details } from '../Details/Details'
@@ -22,7 +22,9 @@ const Home = () => {
 
   return(
     <main>
-      <h1>NYT Top Stories</h1>
+      <Link to='/'>
+        <h1>NYT Top Stories</h1>
+      </Link>
       <Switch>
         <Route exact path='/'>
           <Dropdown setCategory={setCategory} category={category}/>
@@ -34,7 +36,7 @@ const Home = () => {
           const selectedArticle = allArticles.find(article => article.id === match.params.id)
             console.log(selectedArticle)
 
-          return !!selectedArticle && <Details/>
+          return !!selectedArticle && <Details selectedArticle={selectedArticle}/>
         }} />
       </Switch>
 

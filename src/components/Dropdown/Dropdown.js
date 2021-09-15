@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Dropdown.css'
+
 
 export const Dropdown = ({category, setCategory}) => {
 
@@ -8,7 +10,7 @@ export const Dropdown = ({category, setCategory}) => {
   }
   
   return (
-   <div>
+   <div className='dropdown'>
      <select className='topic-select' name='category' value={category} onChange={handleTopicChange}>
        <option value='home'>Select Topic:</option>
        <option value='arts'>Arts</option>
