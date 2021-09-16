@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import './Details.css'
 
@@ -10,12 +10,12 @@ export const Details = ({selectedArticle}) => {
   return(
     <section>
       <img className='details-img' src={selectedArticle.multimedia[0].url} alt={selectedArticle.multimedia[0].caption} />
-      <div>
-        <h2>{selectedArticle.title}</h2>
-        <p>{selectedArticle.byline}</p>
+      <div className='title-byline'>
+        <h2 className='details-title'>{selectedArticle.title}</h2>
+        <p className='details-byline'>{selectedArticle.byline}</p>
       </div>
-      <p>{selectedArticle.abstract}</p>
-      <button><a href={selectedArticle.url}>Read Full Article</a></button>
+      <p className='details-abstract'>{selectedArticle.abstract}</p>
+      <button className='details-btn'><a href={selectedArticle.url}>Read Full Article</a></button>
     </section>
   )
 }
