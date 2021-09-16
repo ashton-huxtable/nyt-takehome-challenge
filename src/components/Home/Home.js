@@ -4,9 +4,15 @@ import { fetchFeaturedArticles } from '../../Utilities/apiCalls';
 import { Articles } from '../Articles/Articles';
 import { Details } from '../Details/Details'
 import { Dropdown } from '../Dropdown/Dropdown';
+import './Home.css'
+let dayjs = require('dayjs');
+
 
 
 const Home = () => {
+
+  const today = dayjs(Date.now()).format('MMMM D, YYYY');
+
 
   const [category, setCategory] = useState('home')
   const [allArticles, setAllArticles] = useState([])
@@ -25,6 +31,7 @@ const Home = () => {
       <Link to='/'>
         <h1>NYT Top Stories</h1>
       </Link>
+        <p className='date'>{today}</p>
       <Switch>
         <Route exact path='/'>
           <Dropdown setCategory={setCategory} category={category}/>
