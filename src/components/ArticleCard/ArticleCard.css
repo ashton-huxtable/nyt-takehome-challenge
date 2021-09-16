@@ -1,33 +1,35 @@
 .article-card{
   width: 90vw;
-  height: 30vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  border-top: 1px solid #2D3339;
 }
 
 .article-card-title{
-  font-size: 3vw;
+  font-size: 5vw;
   margin: 0.2rem;
+  text-align: center;
 }
 
 .article-card-byline{
   margin: 0.2rem;
+  text-align: center;
 }
 
 .article-card-image{
   height: 210px;
   width: 315px;
   border-radius: 5px;
+  margin-bottom: 2vh; 
+
 }
 
 .title-byline{
+  margin-top: 2vh;
   width: 315px;
-  background-color: rgba(255, 255, 255, 0.8);
-  position: absolute;
-  bottom: 2vh
 }
 
 .main-articles{
