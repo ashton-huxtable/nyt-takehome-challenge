@@ -3,7 +3,6 @@
 * {
   margin: 0;
   font-family: 'Noto Serif';
-  /* overflow: none; */
 }
 
 html {
@@ -19,8 +18,3 @@ body{
   width: 100vw;
   overflow-x: hidden;
 }
-
-/* @media screen and (min-width: 600px) {
-
-  
-} */
