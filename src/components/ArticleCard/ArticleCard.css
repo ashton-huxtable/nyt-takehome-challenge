@@ -1,33 +1,35 @@
 .article-card{
   width: 90vw;
-  height: 30vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  border-top: 1px solid #303f4e;
 }
 
 .article-card-title{
-  font-size: 3vw;
+  font-size: 5vw;
   margin: 0.2rem;
+  text-align: center;
 }
 
 .article-card-byline{
   margin: 0.2rem;
+  text-align: center;
 }
 
 .article-card-image{
   height: 210px;
   width: 315px;
   border-radius: 5px;
+  margin-bottom: 2vh; 
+
 }
 
 .title-byline{
+  margin-top: 2vh;
   width: 315px;
-  background-color: rgba(255, 255, 255, 0.8);
-  position: absolute;
-  bottom: 2vh
 }
 
 .main-articles{
@@ -35,4 +37,62 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
+}
+
+@media screen and (min-width: 600px){
+  .article-card{
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+  }
+
+  .article-card-title{
+    font-size: 3vw;
+  }
+
+  .title-byline {
+    width: 50vw;
+  }
+
+  .article-card-image{
+    margin: 0;
+  }
+
+  .article-card-byline{
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .main-articles{
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .article-card{
+    width: 40vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .article-card-title{
+    font-size: 2vw;
+  }
+
+  .title-byline{
+    width: 40vw;
+  }
+
+  .article-card-byline{
+    font-size: 1.5vw;
+  }
+  
 }
