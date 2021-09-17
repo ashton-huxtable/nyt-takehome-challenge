@@ -9,6 +9,7 @@ export const Details = ({selectedArticle}) => {
 
   return(
     <section className='details'>
+      <div className='line'></div>
       <div className='image-title'>
         <img className='details-img' src={selectedArticle.multimedia[0].url} alt={selectedArticle.multimedia[0].caption} />
         <div className='details-title-byline'>
