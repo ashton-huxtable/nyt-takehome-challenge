@@ -3,5 +3,24 @@
 * {
   margin: 0;
   font-family: 'Noto Serif';
-
+  /* overflow: none; */
 }
+
+html {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* @media screen and (min-width: 600px) {
+
+  
+} */
