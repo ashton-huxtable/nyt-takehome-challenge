@@ -1,11 +1,7 @@
 import React from 'react';
-
 import './Details.css'
 
-
 export const Details = ({selectedArticle}) => {
-
-  
 
   return(
     <section className='details'>

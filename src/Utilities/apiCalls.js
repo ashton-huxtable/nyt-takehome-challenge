@@ -3,7 +3,6 @@ export const fetchFeaturedArticles = async(category) => {
   const response = await fetch(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=${key}`)
   const data = await response.json();
 
-  console.log(data, 'data')
   return cleanData(data)
 }
 
@@ -21,7 +20,6 @@ const cleanData = (data) => {
 
     const split = uri.split('/')
     const id = split[3]
-    console.log(id)
 
     return {
       'title': title,

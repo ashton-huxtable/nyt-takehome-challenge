@@ -13,18 +13,14 @@ const Home = () => {
 
   const today = dayjs(Date.now()).format('MMMM D, YYYY');
 
-
   const [category, setCategory] = useState('home')
   const [allArticles, setAllArticles] = useState([])
-
-
 
   useEffect(() => {
     fetchFeaturedArticles(category)
       .then(data => setAllArticles(data))
   }, [category])
 
-  console.log(allArticles, 'articles')
 
   return(
     <main>
@@ -38,11 +34,7 @@ const Home = () => {
           <Articles articles={allArticles}/> 
         </Route>
         <Route exact path='/article/:id' render={({match}) => {
-          console.log(match, 'match')
-
           const selectedArticle = allArticles.find(article => article.id === match.params.id)
-            console.log(selectedArticle)
-
           return !!selectedArticle && <Details selectedArticle={selectedArticle}/>
         }} />
       </Switch>
